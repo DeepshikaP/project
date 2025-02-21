@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <br>
+    <br>
+
+    <p class="text-center" style="font-size: 25px;"><i>
+        "Your next big step in the world of tech begins here."
+    </i></p>
+    
+    <div class="signup-container">
+        <div class="signup-header font">
+            <h2>Sign Up</h2>
+        </div>
+
+        <!-- Sign-Up Form -->
+        <div class="font" id="signup">
+            <form action="signup.php" method="POST" onsubmit="validateForm(event)">
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                </div>
+
+                <!-- Sex (Radio Buttons) -->
+                <div class="form-group">
+                    <label>Sex</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" id="other" value="other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+                </div>
+
+                <!-- Category (Select Dropdown) -->
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="free">Free</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+            </form>
+        </div>
+
+        <p class="text-center mt-3 font">Already have an account? <a href="signin.html">Log in</a></p>
+    </div>
+    
+    <script src="validateEmail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
