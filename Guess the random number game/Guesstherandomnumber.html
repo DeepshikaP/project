@@ -1,0 +1,36 @@
+<style>
+    div{
+        background-color: antiquewhite;
+        max-width: 500px;
+        margin: auto;
+        align-items: center;
+        padding: 50px;
+        margin-top: 200px;
+    }
+</style>
+
+
+<div>
+    <h1>Guess the number</h1>
+    <input type="number" id="check">
+    <button onclick="checkres()">submit</button>
+    <p id="res">you are wrong/right</p>
+    <p id="score">10</p>
+</div>
+
+<script>
+    function checkres() {
+        var n = Number(document.getElementById("check").value)
+        console.log(n);
+        var m = (Math.floor((Math.random()*10))+1)
+        console.log(m);
+        if(n==m){
+            document.getElementById("res").textContent= "you are right"
+            alert("you wone !...")
+        }
+        else{
+            document.getElementById("res").textContent = "You are wrong"
+            document.getElementById("score").textContent=Number(document.getElementById("score").textContent)-1 
+        }
+    }
+</script>
